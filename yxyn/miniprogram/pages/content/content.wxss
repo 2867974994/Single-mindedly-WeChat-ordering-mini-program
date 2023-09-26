@@ -1,0 +1,86 @@
+.banner{
+  height: 440rpx;
+  position: relative;/*relative属性是在保留自己原来位置不变的
+  情况下，在原来的位置中进行偏移*/
+}
+.bannerimg{
+  width: 100%;
+  height: 100%;
+}
+.music1{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  left: 20rpx;
+  top: 20rpx;
+  animation: mymusic 4s linear infinite;/*让该组件使用mymusic
+  动画效果，转一周需要3s，并不停的重复*/
+}
+.music2{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  left: 20rpx;
+  top: 20rpx;
+}
+/*给音乐播放图片设置一个动画效果*/
+@keyframes mymusic{
+  /*规定0、50、100%时图片转动的角度分别为多少度*/
+  0%{transform: rotate(0deg);}
+  50%{transform: rotate(180deg);}
+  100%{transform: rotate(360deg);}
+}
+.content-box{
+  width: 720rpx;
+  margin: 20rpx auto;
+}
+.reser{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #666;
+  padding: 20rpx 0;
+}
+.phone{
+  flex:1;
+  font-size: 18px;
+}
+.btn{
+  width: 120rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 16rpx;
+  background-color: green;
+  color: #fff;
+  margin-left: 20rpx;
+}
+.price{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #666;
+  font-size: 20px;
+  color: #e60303;
+}
+.small{
+  height: 120rpx;
+  line-height: 60rpx;
+  padding: 20rpx 0;
+  overflow: hidden;
+  border-bottom: 1px solid #666;
+  text-indent: 2em;
+}
+.list .item{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 20rpx;
+  border-bottom: 1px solid #666;
+  display: flex;
+  justify-content: space-between;
+}
+.footer{
+  margin-top: 40rpx;
+  text-align: center;
+  columns: #888;
+}

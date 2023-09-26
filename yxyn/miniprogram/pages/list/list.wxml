@@ -1,0 +1,11 @@
+<!--pages/list/list.wxml-->
+<!-- 引入模板结构文件 -->
+<import src="../template/food-template"></import>
+<view class="food-box">
+  <!-- <template is="foodlist" data="{{food}}"></template> -->
+  <block wx:for="{{food}}" wx:key="index">
+    <template is="foodlist" data="{{...item}}"></template>
+  </block>
+    </view>
+    <!-- wx:for="{{food}}" 表示将 food 数组中的每个元素进行遍历。
+wx:key="index" 表示使用索引作为遍历的唯一标识符。 -->

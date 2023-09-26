@@ -1,0 +1,25 @@
+/* 容器样式 */
+.reser {
+  width: 600rpx; /* 设置容器宽度为600rpx */
+  margin: 0 auto; /* 居中对齐 */
+}
+
+/* 文本样式 */
+.reser text {
+  height: 60rpx; /* 设置文本框高度为60rpx */
+  line-height: 60rpx; /* 设置文本垂直居中 */
+}
+
+/* 输入框、单选框和选择器样式 */
+input, radio-group, picker {
+  height: 80rpx; /* 设置输入框、单选框和选择器高度为80rpx */
+  line-height: 80rpx; /* 设置输入框、单选框和选择器垂直居中 */
+  border: 1px solid #000; /* 设置边框为1像素黑色实线 */
+  margin-bottom: 30rpx; /* 设置底部外边距为30rpx，与下一个元素之间留出一些空白 */
+  padding-left: 40rpx; /* 设置左内边距为40rpx，增加一些空白区域 */
+}
+
+/* 按钮样式 */
+button {
+  margin-bottom: 30rpx; /* 设置底部外边距为30rpx，与下一个按钮之间留出一些空白 */
+}

@@ -1,0 +1,46 @@
+<!--pages/content/content.wxml-->
+<view class="banner">
+<!-- 食品图片 -->
+  <image src="{{food.pic}}" class="bannerimg"/>
+  <!-- <image src="/images/icon/music2.png" class="music2"/>
+  <image wx:if="{{isplay==true}}" src="/images/icon/music1.png" class="music1"/> -->
+  <!-- 三元表达式   根据isplay的值来显示不同的音乐 图标-->
+  <image class="{{isplay?'music1':'music2'}}" src="{{isplay?'cloud://cloud1-5glh72tx410dc8c9.636c-cloud1-5glh72tx410dc8c9-1318896004/icon/music1.png':'cloud://cloud1-5glh72tx410dc8c9.636c-cloud1-5glh72tx410dc8c9-1318896004/icon/music2.png'}}" bindtap="{{isplay?'audioPause':'audioPlay'}}"/>
+</view>
+<view class="content-box">
+  <view class="reser">
+   <!--显示订座号码 -->
+   <text class="phone">订座电话：15138305384</text>
+    <!-- 根据收藏情况显示不同的按钮，并绑定对应的事件 -->
+   <view class="btn" style="background-color: {{isStorage?'#ccc':'green'}}" bindtap="{{isStorage?'removeS':'setS'}}">{{isStorage?'已收藏':'收藏'}}</view>
+    <!-- 点击跳转到订座页面 -->
+   <view class="btn" bindtap="reserTap">订座</view>
+  </view>
+   <!--显示价格-->
+  <view class="price">
+    <text>{{food.price}}</text>
+  </view>
+  <!--食品的描述-->
+  <view class="small">
+    <text>{{food.smalltext}}</text>
+  </view>
+   <!--展示食品的部件信息-->
+  <view class="list">
+  <!-- 部件列表的标题 -->
+     <view class="item" style="color: #e60303;">
+        <text class="name">菜名</text>
+        <text class="num">数量(大/中/小)</text>
+        <text class="unit">单位</text>
+     </view>
+     <!-- 用wx.for循环渲染每个部件的信息 -->
+     <view class="item" wx:for="{{food.parts}}" wx:key="id">
+        <text class="name">{{item.foodname}}</text>
+        <text class="num">{{item.foodnum}}</text>
+        <text class="unit">{{item.foodunit}}</text>
+     </view>
+  </view>
+  <!-- 底部文本 -->
+  <view class="footer">
+     <text>凡在本店消费，底锅及餐具免费，赠送饮料一瓶。</text>
+  </view>
+</view>

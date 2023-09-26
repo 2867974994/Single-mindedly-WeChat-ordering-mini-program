@@ -1,0 +1,75 @@
+/* pages/index/index.wxss */
+/* 引入模板样式文件 */
+@import "../template/food-template.wxss";
+
+
+.header{
+  background: url("https://636c-cloud1-5gld3w0480398cc4-1311316501.tcb.qcloud.la/indexBackground.jpg") no-repeat 0 0/100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo{
+  width: 260rpx;
+  height: 60rpx;
+}
+.swiper-box{
+  width: 720rpx;
+  height: 440rpx;
+  margin: 20rpx 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: aqua;
+}
+swiper{
+  width: 100%;
+  height: 100%;
+
+}
+swiper image{
+  width: 100%;
+  height: 100%;
+}
+
+.navbox{
+  width: 720rpx;
+  height: 200rpx;
+  margin: 10px auto; 
+  display: flex;
+  justify-content: space-between; 
+}
+.navitem{
+  width: 350rpx;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(221, 218, 218);
+  box-shadow: 2px 2px 2px 2px #ccc;
+}
+.navitem image{
+  width: 140rpx;
+  height: 140rpx;
+}
+.navitem text{
+  line-height: 60rpx;
+}
+.food-text{
+  width: 720rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #f79534;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px auto 0;
+}
+.food-box{
+  width: 720rpx;
+  margin: 0 auto;  
+}
+
+
+
+
+
+

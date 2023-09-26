@@ -1,0 +1,34 @@
+<import src="../template/food-template"></import>
+<!-- 导入名为 food-template 的模板文件 -->
+<view class="header">
+<!-- 导入名为 food-template 的模板文件 -->
+   <image class="logo" src="cloud://cloud1-5gld3w0480398cc4.636c-cloud1-5gld3w0480398cc4-1311316501/logo.png" style="margin-top: {{menutop}}px;"/>
+    <!-- 设置轮播条件，如循环播放、指示点、自动播放 -->
+   <view class="swiper-box" bindtap="swipertap">
+       <swiper circular="true" indicator-dots="true" 	indicator-active-color="#07c160" autoplay interval="3000" duration="300">
+       <!-- wx:if="{{}}"条件渲染 -->
+         <swiper-item wx:for="{{swiper}}" wx:key="index">
+           <image src="{{item.pic}}" data-id="{{item._id}}"/>
+         </swiper-item>
+         <!-- 通过遍历 swiper 数组进行渲染，每个项包含一张图片，并设置了 data-id 属性为对应项的 _id -->
+       </swiper>
+   </view>
+</view>
+<view class="navbox">
+<!--数组中默认的每一项的变量名为item-->
+  <navigator url="../list/list?classid={{item.classid}}&title={{item.title}}" class="navitem" wx:for="{{navbox}}" wx:key="index">
+      <image src="{{item.pic}}"/>
+      <text>{{item.title}}</text>
+      <!-- 跳转的目标页面路径，并通过 URL 参数传递了 classid 和 title 参数。
+每个导航项包含一张图片和标题文本-->
+    </navigator>  
+</view>
+<view class="food-text">
+  <text>美食推荐</text>
+</view>
+<view class="food-box">
+  <block wx:for="{{food}}" wx:key="index">
+    <template is="foodlist" data="{{...item}}" />
+  </block>
+  <!-- 美食列表容器视图，通过遍历 food 数组进行渲染,使用 <template> 标签引用名为 foodlist 的模板，并通过 ...item 传递每个项的数据 -->
+</view>

@@ -1,0 +1,3 @@
+<!--pages/pay/pay.wxml-->
+<text>总金额：{{money}}元</text>
+<button type="primary" data-money="{{money*100}}" bindtap="pay">支付</button>

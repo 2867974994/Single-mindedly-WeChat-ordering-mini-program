@@ -1,0 +1,43 @@
+<!-- pages/reser/reser.wxml -->
+
+<view class="reser">
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <!-- 手机号输入框 -->
+  <text>手机号(仅支持中国大陆)*：</text>
+  <input name="phone" type="number" maxlength="11" placeholder="手机号"/>
+
+
+  <!-- 姓氏输入框 -->
+  <text>姓氏(输入姓即可)*：</text>
+  <input name="uname" placeholder="输入姓氏"/>
+  
+  <!-- 称谓选择 -->
+  <text>称谓*：</text>
+  <radio-group name="sex">
+    <radio value="先生" checked>先生</radio>
+    <radio value="女士">女士</radio>
+  </radio-group>
+  
+  <!-- 选择到店时间 -->
+  <text>选择到店时间(仅支持提前5天)*：</text>
+  <picker name="reserDate" mode="date" start="{{start}}" end="{{end}}" bindchange="datechange">
+    <!-- 选择器 -->
+    <view style="height: 80rpx;">{{date}}</view>
+  </picker>
+  
+  <!-- 午餐/晚餐选择 -->
+  <text>午餐/晚餐*：</text> 
+  <radio-group name="time">
+    <radio value="noon">午餐</radio>
+    <radio value="night">晚餐</radio>
+  </radio-group>  
+  
+  <!-- 重置按钮 type="warn"：设置按钮的样式为警告样式，按钮的类型为重置表单-->
+  <button type="warn" form-type="reset">重置</button>
+  
+  <!-- 提交按钮 type="primary"：设置按钮的样式为主要样式,指定按钮的类型为提交表单-->
+  <button type="primary" form-type="submit">提交</button>
+
+</form>
+</view>

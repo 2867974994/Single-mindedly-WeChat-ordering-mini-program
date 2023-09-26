@@ -1,0 +1,48 @@
+{
+  "pages":[ 
+
+    "pages/index/index",
+    "pages/content/content",
+    "pages/list/list",
+    "pages/user/user",
+    "pages/reser/reser",
+    "pages/phone/phone",
+    "pages/time/time"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list":[
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/icon/index.png",
+        "selectedIconPath": "/images/icon/index-h.png"
+      },
+      {
+        "pagePath": "pages/phone/phone",
+        "text": "联系我们",
+        "iconPath": "/images/icon/phone.png",
+        "selectedIconPath": "/images/icon/phone-h.png"
+      },
+      {
+        "pagePath": "pages/reser/reser",
+        "text": "订座",
+        "iconPath": "/images/icon/reser.png",
+        "selectedIconPath": "/images/icon/reser-h.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/images/icon/user.png",
+        "selectedIconPath": "/images/icon/user-h.png"
+      }
+    ]
+  }
+}

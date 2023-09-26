@@ -1,0 +1,22 @@
+<!--pages/phone/phone.wxml-->
+<view class="container">
+  <video src="cloud://cloud1-5gld3w0480398cc4.636c-cloud1-5gld3w0480398cc4-1311316501/mda-mku8wwi0pz206hpp.mp4" controls></video>
+  <view class="info">
+    <view class="info-item">
+      <text>餐厅名称:</text><text>一心一意主题餐厅⭐</text>
+    </view>
+    <view class="info-item">
+      <text>餐厅地址:</text><text>郑州市金水区XX街XX号</text>
+    </view>
+    <view class="info-item">
+      <text>订座电话:</text><text>18138305384</text>
+    </view>
+    <view class="info-item">
+      <text>在线订座:</text>
+      <view class="btn" bindtap="telephone">立即订座</view>
+    </view>
+  </view>
+  <map longitude="113" latitude="34" scale="14" show-location="true"></map>
+
+
+</view>

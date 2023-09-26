@@ -1,0 +1,70 @@
+.container{
+  width: 720rpx;
+  margin: 0 auto;
+}
+.userinfo{
+  padding: 40rpx;
+  display: flex;
+  align-items:center;
+}
+.user-avatar{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 100rpx;
+}
+.user-name{
+  font-size: 20px;
+}
+.tab{
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 1px solid #07c160;
+  display: flex;
+}
+.storage,.reser{
+  flex: 1;
+  text-align: center;
+}
+.storage-item{
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #ccc;
+}
+.storagepic{
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+}
+.storagename{
+  flex: 1;
+  height: 60rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+.storagedel{
+  width: 100rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background-color: #07c160;
+  border-radius: 6px;
+  color: #fff;
+}
+.reser-item{
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-bottom: 1px solid rgb(110, 109, 109);
+  padding: 20rpx 0;
+}
+.reser-date,.reser-time{
+  width: 250rpx;
+}
+.table-num{
+  width: 220rpx;
+}

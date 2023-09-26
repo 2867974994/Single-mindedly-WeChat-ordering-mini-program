@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "openapi": [
+    ]
+  },
+  "triggers": [
+    {
+      "name": "updateDb",
+      "type": "timer",
+      "config": "0 53 7 * * * *"
+    }
+  ]
+
+
+}

@@ -1,0 +1,57 @@
+<!--整体容器-->
+<view class="container">
+<!--用户信息-->
+   <view class="userinfo">
+   <!--用户头像-->
+      <view class="user-avatar">
+         <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <!--用户头像，通过type*** 显示-->
+      <!--用户昵称-->
+      <view class="user-name">
+         昵称：<open-data type="userNickName"></open-data>
+         <!--用户昵称，同样使用type***-->
+      </view>
+   </view>
+   <!--用户信息-->
+   <!--选项卡-->
+   <view class="tab">
+   <!--已收藏选项卡，动态绑定样式实现选中状态-->
+      <view class="storage" style="{{isSto?'background-color: #07c160; color: #fff;':'background-color: #fff; color: #07c160;'}}" bindtap="stoTap">已收藏</view>
+      <!--已收藏选项卡，动态绑定样式实现选中状态-->
+      <!--查看订座选项卡，动态绑定样式实现选中状态-->
+      <view class="reser" style="{{isSto?'background-color: #fff; color: #07c160;':'background-color: #07c160; color: #fff;'}}" bindtap="reTap">查看订座</view>
+      <!--查看订座选项卡，动态绑定样式实现选中状态-->
+   </view>
+   <!--选项卡-->
+   <!--已收藏列表的容器视图，wx:if条件渲染，根据info的值确定·-->
+   <view class="storage-list" wx:if="{{isSto}}">
+      <view class="storage-item" wx:for="{{stoList}}" wx:key="index">
+         <image class="storagepic" src="{{item.pic}}"/>
+         <text class="storagename" bindtap="tz" data-id="{{item.id}}">{{item.title}}</text>
+         <view class="storagedel" bindtap="delSto" data-id="{{item.id}}"  data-idx="{{index}}">删除</view><!--删除按钮视图-->
+      </view>
+   </view>
+   <!--已收藏列表的容器视图，wx:if条件渲染，根据info的值确定·-->
+   <!--查看订座列表视图-->
+   <view class="reser-list" wx:else="isSto">
+    <!--订座项的容器视图-->
+      <view class="reser-item">
+         <text class="reser-date">到店时间</text>
+         <text class="reser-time">午餐/晚餐</text>
+         <text class="table-num">桌号</text>
+      </view>
+      <!--订座项的容器视图-->
+      <!--包裹列表项的块级视图 wx：for列表渲染指令，遍历info数组，wx：key指定唯一索引-->
+      <block wx:for="{{info}}" wx:key="index">
+          <view class="reser-item">
+            <text class="reser-date">{{item.reserdate}}</text>
+            <text class="reser-time">{{item.resertime}}</text>
+            <text class="table-num">{{item.tablenum}}</text>
+          </view>
+    </block>
+     <!--包裹列表项的块级视图 wx：for列表渲染指令，遍历info数组，wx：key指定唯一索引-->
+   </view>
+    <!--查看订座列表视图-->
+</view>
+<!--整体容器-->
